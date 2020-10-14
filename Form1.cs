@@ -55,12 +55,32 @@ namespace RPG_char_gen
 
             else
             {
-                object playername_bookmark = "player_name";
+                object playername_bookmark =    "player_name";
+                object charname_bookmark =      "char_name";
+                object race_bookmark =          "race";
+                object origin_bookmark =        "origin";
+                object age_bookmark =           "age";
+                object gender_bookmark =        "gender";
                 oDoc.Bookmarks[ref playername_bookmark].Range.Text = Tbox_name.Text;
+                oDoc.Bookmarks[ref charname_bookmark].Range.Text = Tbox_char_name.Text;
+                oDoc.Bookmarks[ref race_bookmark].Range.Text = Tbox_race.Text;
+                oDoc.Bookmarks[ref origin_bookmark].Range.Text = Tbox_origin.Text;
+                oDoc.Bookmarks[ref age_bookmark].Range.Text = Tbox_age.Text;
+                oDoc.Bookmarks[ref gender_bookmark].Range.Text = Cbox_gender.Text;
             }
 
             //Close this form.
             this.Close();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
